@@ -1,0 +1,243 @@
+@font-face {
+font-family: "Mozer";
+src: url("Mozer.otf") format("opentype");
+}
+
+:root {
+    --color1: #efecec;
+    --color2: #243949;
+    --color3: #5c5757;
+    --color4: #363434;
+    --errorColor: #9e3e3e;
+    --gradient: linear-gradient(#243949, #517fa4);
+}
+
+*{
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    font-family: 'Mozer';
+}
+
+.max-width{
+    width: 100%;
+}
+
+.margin-auto{
+    margin: auto;
+}
+
+.main-background{
+    background-color: var(--color1);
+}
+
+.position-fixed{
+    position: fixed;
+}
+
+.border-box{
+    box-sizing: border-box;
+}
+
+.fill{
+    height: 6rem;
+}
+
+.display-flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.display-flex-space-between{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-select-none{
+    user-select: none;
+}
+
+.main-font-color{
+    color: var(--color4);
+}
+
+.width-90{
+    width: 90%;
+}
+
+.padding-05{
+    padding: 0.5rem;
+}
+
+.width-50{
+    width: 50%;
+}
+
+.text-decoration-none{
+    text-decoration: none;
+}
+
+.text-decoration-underline{
+    text-decoration: underline;
+}
+
+.border-radius-05{
+    border-radius: 0.5rem;
+}
+
+.main-wrapper{
+    width: 90%;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.display-flex-right{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.bottom-border{
+    border-bottom: solid 4px var(--color4);
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.margin-05{
+    margin: 0.5rem;
+}
+
+.padding-025{
+    padding: 0.25rem;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-justify{
+    text-align: justify;
+}
+
+.gradient-button{
+    color: var(--color1);
+    background-image: var(--gradient);
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    width: 8rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.font-medium{
+    font-size: 1.2rem;
+}
+
+.font-big{
+    font-size: 1.4rem;
+}
+
+.padding-2{
+    padding: 2rem;
+}
+
+.first-line-title:first-line{
+    color: var(--color2);
+    font-size: 2.25rem;
+}
+
+.third-color{
+    color: var(--color1);
+}
+
+.header-logo{
+    width: 8rem;
+}
+
+.one-third-display{
+    width: 28%;
+}
+
+.form-logo{
+    width: 14rem;
+}
+
+nav > a{
+    margin: 0.5rem;
+    width: 50%;
+    user-select: none;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color4);
+    font-size: 1.2rem;
+}
+
+.margin-1{
+    margin: 1rem;
+}
+
+.select-anim:focus{
+    outline: none;
+    margin: 0.25rem 0.5rem 0.5rem 0.5rem;
+    border-bottom: solid 4px var(--color4);
+}
+
+.main-font-color:visited{
+    color: var(--color4);
+}
+
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
+.error{
+    color: var(--errorColor);
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color1);
+  border: 0px none var(--color1);
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color1);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: var(--color1);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color4);
+  border: 0px none var(--color1);
+  border-radius: 46px;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: var(--color4);
+}
+
+::-webkit-scrollbar-track:active {
+  background: var(--color4);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}

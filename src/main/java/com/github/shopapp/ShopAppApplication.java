@@ -32,12 +32,7 @@ public class ShopAppApplication {
 		ProductDaoImp productDaoImp = new ProductDaoImp();
 		BasicUserDaoImp basicUserDaoImp = new BasicUserDaoImp();
 		BasicUser basicUser = new BasicUser("admin", new BCryptPasswordEncoder().encode("admin"), true, "admin@email", basicRoleDaoImp.getFullList().get(1));
-
-		Product product = productDaoImp.getFullList().get(0);
-		basicUser.addProduct(product);
 		basicUserDaoImp.save(basicUser);
-		basicUser.getCartOrder().getProducts().remove(product);
-		basicUserDaoImp.update(basicUser);
 	}
 
 	private static void fillProducts() {

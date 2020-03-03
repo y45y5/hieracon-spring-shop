@@ -69,6 +69,9 @@ public class BasicUser {
         this.password = password;
         this.enabled = enabled;
         this.email = email;
+        Product product = new Product();
+        addProduct(product);
+        getCartOrder().getProducts().remove(product);
         addRole(basicRole);
     }
 

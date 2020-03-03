@@ -47,15 +47,8 @@ public class RegisterController {
         if (!username.isEmpty() && !password.isEmpty() && !repeatPassword.isEmpty() && !email.isEmpty()){
             if (validator.checkUsername(username) && validator.checkEmail(email) && validator.checkPassword(password, repeatPassword)) {
                 BasicRoleDaoImp basicRoleDaoImp = new BasicRoleDaoImp();
-                ProductDaoImp productDaoImp = new ProductDaoImp();
                 BasicUser basicUser = new BasicUser(username, new BCryptPasswordEncoder().encode(password), true, email, basicRoleDaoImp.getFullList().get(0));
-
-                Product product = productDaoImp.getFullList().get(0);
-                basicUser.addProduct(product);
                 basicUserDaoImp.save(basicUser);
-                basicUser.getCartOrder().getProducts().remove(product);
-                basicUserDaoImp.update(basicUser);
-
                 modelAndView.setViewName("redirect:/login?accountCreated");
             } else modelAndView.setViewName("redirect:/register?invalidError");
         } else modelAndView.setViewName("redirect:/register?emptyError");

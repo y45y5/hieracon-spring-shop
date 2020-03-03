@@ -28,9 +28,6 @@
                         </div>
                     </c:otherwise>
                 </c:choose>
-                <c:forEach items="${orders}" var="orders">
-                    <jsp:directive.include file = "includes/orders.jsp" />
-                </c:forEach>
             </section>
 
     </div>
